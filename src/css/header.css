@@ -157,7 +157,7 @@
 }
 
 .header-close-icon {
-  fill: var(--color-text);
+  stroke: var(--color-text);
 }
 
 .header-burger-menu-list {
