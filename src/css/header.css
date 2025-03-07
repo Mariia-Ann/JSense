@@ -188,8 +188,10 @@
 
 .header-burger-order-btn {
   display: flex;
-  width: 164px;
-  height: 45px;
+  justify-content: center;
+  align-items: center;
+  /* width: 164px;
+  height: 45px; */
   padding: 14px 31.5px;
   border-radius: 60px;
   color: var(--color-text);
@@ -225,8 +227,8 @@
   }
   .header-order-btn {
     display: flex;
-    width: 163px;
-    height: 55px;
+    /* width: 163px;
+    height: 55px; */
     padding: 18px 24px;
     border-radius: 60px;
     color: var(--color-text);
