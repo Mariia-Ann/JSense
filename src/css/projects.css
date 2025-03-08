@@ -1,4 +1,4 @@
-.projects-container {
+.projects-section {
     padding: 32px 0;
   }
   
@@ -106,7 +106,7 @@
   }
   
   @media screen and (min-width: 768px) {
-    .projects-container {
+    .projects-section {
       padding: 48px 0;
     }
   
@@ -162,7 +162,7 @@
   }
   
   @media screen and (min-width: 1440px) {
-    .projects-container {
+    .projects-section {
       padding: 82px 0;
     }
     .projects-content-block {
