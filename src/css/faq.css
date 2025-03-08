@@ -1,0 +1,83 @@
+.faq-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--color-text-title);
+}
+.faq-list {
+  border-bottom: 1px solid var(--color-text-title);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* padding: 32; */
+  margin: 0;
+  width: 1378px;
+  height: auto;
+  position: relative;
+  padding-left: 32px;
+}
+.faq-list::before {
+  width: 584px;
+  height: 0px;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+  /* content: '';
+    position: absolute;
+    left: 688px; /* Відступ ліворуч 
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Товщина лінії 
+    background-color: var(--color-text-title); Колір лінії */
+}
+.faq-item {
+  width: calc((100% - 64px) / 2);
+  padding-top: 32px;
+  border-top: 1px solid var(--color-text-title);
+  border-top: 1px solid var(--color-text-title);
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.faq-subtext {
+  width: 656px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+.faq-vector {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-text-title);
+  border-radius: 50%;
+}
+.faq-vector-icon {
+  /* fill: var(--color-text); */
+  stroke: var(--color-text);
+}
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.faq-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--color-text-tr);
+  padding-top: 32px;
+}
