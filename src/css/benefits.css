@@ -4,20 +4,18 @@
   padding-bottom: 32px;
 }
 .benefits-container {
-  display: inline-flex;
+display: inline-flex;
 flex-direction: column;
 align-items: flex-start;
 gap: 32px;
 }
 
 .benefits-chapter {
-
-color: rgba(250, 250, 250, 0.40);
+color: var(--color-text-title);
 font-size: 16px;
 font-style: normal;
 font-weight: 600;
-line-height: 24px;
-letter-spacing: -0.32px;
+letter-spacing: -0.02em;
 text-transform: uppercase;
 }
 
@@ -29,12 +27,10 @@ text-transform: uppercase;
   }
 .benefits-item {
 display: flex;
-width: 344px;
 padding: 24px;
 flex-direction: column;
-align-items: flex-start;
 border-radius: 20px;
-background: #242527;
+background:  var(--color-cards);
 }
 .benefits-icon {
 display: flex;
@@ -45,27 +41,25 @@ margin-bottom: 64px;
 justify-content: center;
 align-items: center;
 border-radius: 10px;
-background: #ED3B44;
-stroke:#FAFAFA;
+background:  var(--color-button);
+stroke:var(--color-text);
+fill: transparent;
 }
 .benefits-title {
-  margin-bottom: 8px;
-  font-size: 20px;
+margin-bottom: 8px;
+font-size: 20px;
 font-style: normal;
 font-weight: 600;
-
 letter-spacing: -0.4px;
 }
 .benefits-text {
-color: rgba(250, 250, 250, 0.60)
+color: var(--color-text-tr);
 }
 .benefits-btn {
 display: inline-block;
 padding: 18px 36px;
 margin-top: 32px;
-justify-content: center;
 align-items: center;
-gap: 10px;
 border-radius: 60px;
 border: 1px solid rgba(250, 250, 250, 0.20);
 }
@@ -80,6 +74,9 @@ border: 1px solid rgba(250, 250, 250, 0.20);
   .benefits-list {
    flex-wrap: wrap;
    flex-direction: row;
+  }
+  .benefits-item {
+    width: 344px;
   }
   .benefits-btn {
     margin-top: 64px;
@@ -98,15 +95,20 @@ border: 1px solid rgba(250, 250, 250, 0.20);
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 412px;
-    padding: 0;
+    gap: 0;
     }
   .benefits-left {
     width: 50%;
-    }  
+    } 
+    .benefits-right {
+      width: 50%;
+      }   
   .benefits-list {
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
+    }
+    .benefits-item {
+      width: 332px;
     }
     }
