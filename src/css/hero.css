@@ -6,13 +6,11 @@
 }
 
 .hero-title {
-    font-weight: 500;
     font-size: 50px;
-    line-height: 100%;
+    line-height: 1;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: var(--color-text);
-    font-family: "Inter Tight", sans-serif;
     margin-bottom: 212px;
 }
 
@@ -33,7 +31,6 @@
     border-radius: 60px;
     width: 37px;
     height: 37px;
-    font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
     display: flex;
@@ -52,7 +49,6 @@
     justify-content: center;
     flex-direction: row;
     gap: 10px;
-    font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
     color: var(--color-text);
