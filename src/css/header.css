@@ -91,6 +91,7 @@
   display: flex;
   background-color: transparent;
   border: none;
+  outline: none;
   padding: 0;
   animation-duration: 1s;
   animation-name: slidein;

@@ -1,21 +1,21 @@
-const MenuList = document.querySelector('.header-menu-list');
-const MenuBtn = document.querySelector('.header-menu-link');
-const BurgerMenu = document.querySelector('.header-burger-menu');
-const BurgerBtn = document.querySelector('.header-burger-btn');
-const BurgeMenuList = document.querySelector('.header-burger-menu-list');
-const OrderBtn = document.querySelector('.header-burger-order-btn');
-const CloseBtn = document.querySelector('.header-close-btn');
+const menuList = document.querySelector('.header-menu-list');
+const menuBtn = document.querySelector('.header-menu-link');
+const burgerMenu = document.querySelector('.header-burger-menu');
+const burgerBtn = document.querySelector('.header-burger-btn');
+const burgeMenuList = document.querySelector('.header-burger-menu-list');
+const orderBtn = document.querySelector('.header-burger-order-btn');
+const closeBtn = document.querySelector('.header-close-btn');
 
-MenuList.addEventListener('click', handleMenuClick);
-MenuBtn.addEventListener('click', handleMenuClick);
-BurgerBtn.addEventListener('click', handleBurgerClick);
-BurgeMenuList.addEventListener('click', handleCloseClick);
-OrderBtn.addEventListener('click', handleCloseClick);
-CloseBtn.addEventListener('click', handleCloseClick);
+menuList.addEventListener('click', handleMenuClick);
+menuBtn.addEventListener('click', handleMenuClick);
+burgerBtn.addEventListener('click', handleBurgerClick);
+burgeMenuList.addEventListener('click', handleCloseClick);
+orderBtn.addEventListener('click', handleCloseClick);
+closeBtn.addEventListener('click', handleCloseClick);
 
 document.body.addEventListener('click', event => {
   if (
-    !MenuList.classList.contains('visually-hidden') &&
+    !menuList.classList.contains('visually-hidden') &&
     !event.target.classList.contains('header-menu-link')
   ) {
     handleMenuClick();
@@ -25,14 +25,14 @@ document.body.addEventListener('click', event => {
 document.addEventListener('keydown', event => {
   if (
     event.key === 'Escape' &&
-    !MenuList.classList.contains('visually-hidden')
+    burgerMenu.classList.contains('is-open-header')
   ) {
-    handleMenuClick();
+    handleCloseClick();
   }
 });
 
-const DropDown = new KeyframeEffect(
-  MenuList,
+const dropDown = new KeyframeEffect(
+  menuList,
   [
     { opacity: '0', transform: 'translateY(-100%)' },
     { opacity: '1', transform: 'translateY(0)' },
@@ -40,8 +40,8 @@ const DropDown = new KeyframeEffect(
   { duration: 500 }
 );
 
-const DropUp = new KeyframeEffect(
-  MenuList,
+const dropUp = new KeyframeEffect(
+  menuList,
   [
     { opacity: '1', transform: 'translateY(0)' },
     { opacity: '0', transform: 'translateY(-100%)' },
@@ -49,48 +49,48 @@ const DropUp = new KeyframeEffect(
   { duration: 500 }
 );
 
-const DropDownAnimation = new Animation(DropDown, document.timeline);
+const dropDownAnimation = new Animation(dropDown, document.timeline);
 
-const DropUpAnimation = new Animation(DropUp, document.timeline);
+const dropUpAnimation = new Animation(dropUp, document.timeline);
 
-const OpenKey = new KeyframeEffect(
-  BurgerMenu,
+const openKey = new KeyframeEffect(
+  burgerMenu,
   [{ transform: 'translateX(100%)' }, { transform: 'translateX(0)' }],
   { duration: 500 }
 );
 
-const CloseKey = new KeyframeEffect(
-  BurgerMenu,
+const closeKey = new KeyframeEffect(
+  burgerMenu,
   [{ transform: 'translateX(0)' }, { transform: 'translateX(100%)' }],
   { duration: 500 }
 );
 
-const OpenBurgerAnimation = new Animation(OpenKey, document.timeline);
+const openBurgerAnimation = new Animation(openKey, document.timeline);
 
-const CloseBurgerAnimation = new Animation(CloseKey, document.timeline);
+const closeBurgerAnimation = new Animation(closeKey, document.timeline);
 
 function handleMenuClick() {
-  if (MenuList.classList.contains('visually-hidden')) {
-    DropDownAnimation.play();
-    MenuList.classList.remove('visually-hidden');
+  if (menuList.classList.contains('visually-hidden')) {
+    dropDownAnimation.play();
+    menuList.classList.remove('visually-hidden');
     return;
   }
-  DropUpAnimation.play();
+  dropUpAnimation.play();
   setTimeout(() => {
-    MenuList.classList.add('visually-hidden');
+    menuList.classList.add('visually-hidden');
   }, 500);
 }
 
 function handleBurgerClick() {
-  BurgerMenu.classList.add('is-open-header');
-  OpenBurgerAnimation.play();
+  burgerMenu.classList.add('is-open-header');
+  openBurgerAnimation.play();
   document.body.style.overflow = 'hidden';
 }
 
 function handleCloseClick() {
-  CloseBurgerAnimation.play();
+  closeBurgerAnimation.play();
   setTimeout(() => {
-    BurgerMenu.classList.remove('is-open-header');
+    burgerMenu.classList.remove('is-open-header');
   }, 500);
   document.body.style.overflow = '';
 }
