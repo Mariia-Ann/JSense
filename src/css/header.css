@@ -205,8 +205,6 @@
     animation-name: slide;
   }
   .header-menu-link {
-    letter-spacing: -0.02em;
-    color: var(--color-text);
     padding: 10px;
     width: 67px;
     height: 39px;
