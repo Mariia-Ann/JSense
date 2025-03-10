@@ -1,7 +1,6 @@
 .hero {
     background: url("../img/hero/hero-1.webp")no-repeat center center/cover;
     background-position-x: 39%;
-    position: relative;
     padding: 281px 0 32px;
 }
 
@@ -97,9 +96,8 @@
 
 @media only screen and (min-width: 1440px) {
     .hero-title {
-        font-size: 90px;
         margin-bottom: 243px;
-            display: flex;
-                justify-content: center;
+        display: flex;
+        justify-content: center;
     }
 }
