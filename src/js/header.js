@@ -7,11 +7,14 @@ const orderBtn = document.querySelector('.header-burger-order-btn');
 const closeBtn = document.querySelector('.header-close-btn');
 
 menuList.addEventListener('click', handleMenuClick);
-menuBtn.addEventListener('click', handleMenuClick);
 burgerBtn.addEventListener('click', handleBurgerClick);
 burgeMenuList.addEventListener('click', handleCloseClick);
 orderBtn.addEventListener('click', handleCloseClick);
 closeBtn.addEventListener('click', handleCloseClick);
+menuBtn.addEventListener('click', handleMenuClick);
+menuBtn.addEventListener('click', () => {
+  menuBtn.blur();
+});
 
 document.body.addEventListener('click', event => {
   if (
