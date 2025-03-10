@@ -1,14 +1,16 @@
 .covers {
     position: relative;
-    background: url('./img/covers/elements_vectors-min.png') repeat center center;
+    background: url('../img/covers/elements_vectors-min.png') repeat center center;
     background-size: contain;
-    padding: 60px 0;
+    padding: 60px 5vw;
     overflow: hidden;
+    /* Обрізаємо все, що виходить за межі секції */
 }
 
 .content {
     position: relative;
     overflow: hidden;
+    /* Обрізаємо контент, що виходить за межі */
 }
 
 .marquee {
@@ -17,16 +19,14 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow: hidden;
     font-family: "Pridi", sans-serif;
     font-weight: 600;
     font-size: 34px;
     text-transform: uppercase;
-    animation-name: marqueeLine;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: marqueeLine 15s linear infinite;
+    /* Збільшена тривалість анімації */
     white-space: nowrap;
+    will-change: transform;
 }
 
 .marquee__item {
@@ -45,30 +45,30 @@
 }
 
 @keyframes marqueeLine {
-    from {
-        transform: translateX(100%);
+    0% {
+        transform: translateX(calc(100vw + 100%));
     }
 
-    to {
+    100% {
         transform: translateX(-100%);
     }
 }
 
 .marquee__inner {
+    min-width: 100vw;
     height: 40vh;
     display: flex;
     flex-wrap: nowrap;
     transform: rotate(17deg);
     align-items: center;
+    overflow: visible;
 }
 
-
-/* mobile */
-
+/* Mobile */
 
 @media (max-width: 375px) {
     .covers {
-        padding: 40px 0px;
+        padding: 40px 5vw;
     }
 
     .marquee {
@@ -77,18 +77,16 @@
     }
 
     .marquee__item {
-        width: 282px;
-        height: 162px;
+        width: 544px;
+        height: 314px;
     }
 }
 
-
-/* tablet */
-
+/* Tablet */
 
 @media (min-width: 768px) and (max-width: 1440px) {
     .covers {
-        padding: 50px 0px;
+        padding: 50px 5vw;
     }
 
     .marquee {
@@ -97,18 +95,16 @@
     }
 
     .marquee__item {
-        width: 500px;
-        height: 250px;
+        width: 544px;
+        height: 314px;
     }
 }
 
-
-/* desktop */
-
+/* Desktop */
 
 @media (min-width: 1440px) {
     .covers {
-        padding: 60px 0px;
+        padding: 60px 5vw;
     }
 
     .marquee {
