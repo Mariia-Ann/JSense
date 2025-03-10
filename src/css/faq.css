@@ -34,6 +34,8 @@
   align-items: center;
   width: 100%;
   background: none;
+  border: none;
+  gap: 20px;
   margin-bottom: 16px;
   cursor: pointer;
   text-align: left;
@@ -88,6 +90,9 @@
     padding: 32px 0 16px 0;
     width: 100%;
   }
+  .faq-text {
+    padding-right: 48px;
+  }
 }
 
 /* Styles for Desktop devices */
@@ -105,6 +110,9 @@
   .faq-item {
     padding: 32px 0;
     width: 100%;
+  }
+  .faq-text {
+    padding-right: 0;
   }
 
   /*зміна позицій */
