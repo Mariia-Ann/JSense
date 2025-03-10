@@ -2,7 +2,7 @@
     position: relative;
     background: url('../img/covers/elements_vectors-min.png') repeat center center;
     background-size: contain;
-    padding: 60px 5vw;
+    padding: 60px 0px;
     overflow: hidden;
 }
 
@@ -62,10 +62,9 @@
 }
 
 /* Mobile */
-
 @media (max-width: 375px) {
     .covers {
-        padding: 40px 5vw;
+        padding: 40px 0px;
     }
 
     .marquee {
@@ -74,16 +73,31 @@
     }
 
     .marquee__item {
-        width: 544px;
-        height: 314px;
+        width: 282px;
+        height: 162px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .marquee__line {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .marquee__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
 /* Tablet */
-
 @media (min-width: 768px) and (max-width: 1440px) {
     .covers {
-        padding: 50px 5vw;
+        padding: 50px 0px;
     }
 
     .marquee {
@@ -98,10 +112,9 @@
 }
 
 /* Desktop */
-
 @media (min-width: 1440px) {
     .covers {
-        padding: 60px 5vw;
+        padding: 60px 0px;
     }
 
     .marquee {
