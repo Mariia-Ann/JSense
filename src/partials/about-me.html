@@ -1,29 +1,53 @@
 <section class="about-me" id="about-me">
   <div class="container about-me-container">
+    <h2 class="visually-hidden">About me</h2>
     <div class="about-me-header">
       <div class="about-me-text">
-        <h2 class="about-me-title">
+        <h3 class="about-me-title">
           I work with people all over the world to create impressive and
           <span class="title-part-funct">functional</span>
           <span class="title-part-web">websites</span> that reflect each
           client's unique personality.
-        </h2>
+        </h3>
       </div>
       <div class="about-me-image">
-        <img
-          class="about-me-img"
-          src="./img/about-me/portfolio-desktop.jpg"
-          alt="Description of your image"
-          width="680"
-          height="700"
-        />
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              ../img/about-me/portfolio-desktop.jpg   1x,
+              ../img/about-me/portfolio-desktop-2.jpg 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ../img/about-me/portfolio-tablet.jpg   1x,
+              ../img/about-me/portfolio-tablet-2.jpg 2x
+            "
+          />
+          <source
+            media="(max-width: 767.98px)"
+            srcset="
+              ../img/about-me/portfolio-mob.jpg   1x,
+              ../img/about-me/portfolio-mob-2.jpg 2x
+            "
+          />
+          <img
+            class="about-me-img"
+            src="../img/about-me/portfolio-mob.jpg"
+            alt="Description of your image"
+            width="680"
+            height="700"
+          />
+        </picture>
       </div>
     </div>
 
-    <div class="information">
-      <div class="information-about">
+    <ul class="information">
+      <li class="information-about">
         <div class="information-about-blok">
-          <h5 class="information-about-title">About me</h5>
+          <h4 class="information-about-title">About me</h4>
 
           <button class="about-button">
             <svg class="benefits-icon" width="20" height="20">
@@ -54,11 +78,11 @@
             scalable software.
           </p>
         </div>
-      </div>
+      </li>
       <!--  -->
-      <div class="information-role">
+      <li class="information-role">
         <div class="information-about-blok">
-          <h5 class="information-about-title">ROLE</h5>
+          <h4 class="information-about-title">Role</h4>
           <button class="about-button">
             <svg class="benefits-icon" width="24" height="24">
               <use href="./img/icons.svg#icon-icon-down"></use>
@@ -73,11 +97,11 @@
             <li class="information-content-link">Blender(enjoy)</li>
           </ul>
         </div>
-      </div>
+      </li>
       <!--  -->
-      <div class="information-education">
+      <li class="information-education">
         <div class="information-about-blok">
-          <h5 class="information-about-title">EDUCATION</h5>
+          <h4 class="information-about-title">Education</h4>
           <button class="about-button">
             <svg class="benefits-icon" width="24" height="24">
               <use href="./img/icons.svg#icon-icon-down"></use>
@@ -100,8 +124,8 @@
             </li>
           </ul>
         </div>
-      </div>
-    </div>
+      </li>
+    </li>
 
     <div class="skills">
       <ul class="skills-list">
