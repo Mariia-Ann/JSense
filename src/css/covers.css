@@ -4,13 +4,11 @@
     background-size: contain;
     padding: 60px 5vw;
     overflow: hidden;
-    /* Обрізаємо все, що виходить за межі секції */
 }
 
 .content {
     position: relative;
     overflow: hidden;
-    /* Обрізаємо контент, що виходить за межі */
 }
 
 .marquee {
@@ -24,7 +22,6 @@
     font-size: 34px;
     text-transform: uppercase;
     animation: marqueeLine 15s linear infinite;
-    /* Збільшена тривалість анімації */
     white-space: nowrap;
     will-change: transform;
 }
