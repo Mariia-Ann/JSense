@@ -1,10 +1,10 @@
 <section class="reviews" id="reviews-id">
-  <div class="reviews-container">
-    <h2 class="reviews-header">REVIEWS</h2>
+  <div class="container reviews-container">
+    <h2 class="reviews-header">Reviews</h2>
     <div
       class="swiper-container swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
     >
-      <h2 class="not-found visually-hidden">Not found</h2>
+      <p class="not-found visually-hidden">Not found</p>
       <ul
         class="reviews-list swiper-wrapper"
         id="swiper-wrapper"
@@ -113,18 +113,25 @@
         tabindex="-1"
         aria-label="Previous slide"
         aria-controls="swiper-wrapper"
-        aria-disabled="true"
-        disabled
-      ></button>
+        aria-disabled="false"
+      >
+        <svg class="arrow-btn-svg" width="32" height="32">
+          <use href="       "></use>
+        </svg>
+        ::after
+      </button>
       <button
         class="right-btn swiper-button-next swiper-button-lock swiper-button-disabled"
         id="right-btn"
         tabindex="-1"
         aria-label="Next slide"
         aria-controls="swiper-wrapper"
-        aria-disabled="true"
-        disabled
-      ></button>
+        aria-disabled="false"
+      >
+        <svg class="arrow-btn-svg" width="32" height="32">
+          <use href="       "></use>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
