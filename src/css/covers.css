@@ -21,7 +21,8 @@
     font-weight: 600;
     font-size: 34px;
     text-transform: uppercase;
-    animation: marqueeLine 15s linear infinite;
+    animation: marqueeLine 30s linear infinite;
+    /* Швидкість анімації */
     white-space: nowrap;
     will-change: transform;
 }
@@ -43,16 +44,17 @@
 
 @keyframes marqueeLine {
     0% {
-        transform: translateX(calc(100vw + 100%));
+        transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
 .marquee__inner {
-    min-width: 100vw;
+    min-width: 200vw;
+    /* Подвоєна ширина для безшовного ефекту */
     height: 40vh;
     display: flex;
     flex-wrap: nowrap;
