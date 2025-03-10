@@ -1,6 +1,6 @@
 .covers {
     position: relative;
-    padding: 60px 0px;
+    padding: 32px 0px;
     overflow: hidden;
 }
 
@@ -63,10 +63,6 @@
 
 /* Mobile */
 
-    .covers {
-        padding: 32px 0px;
-    }
-
     .marquee {
         font-size: 28px;
         gap: 16px;
@@ -115,9 +111,6 @@
 /* Desktop */
 
 @media screen and (min-width: 1440px) {
-    .covers {
-        padding: 96px 0px;
-    }
 
     .marquee {
         font-size: 34px;
