@@ -4,9 +4,9 @@
   padding-bottom: 32px;
 }
 .benefits-container {
-display: inline-flex;
+display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
 gap: 32px;
 }
 
@@ -21,7 +21,7 @@ text-transform: uppercase;
 .benefits-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-startce;
   gap: 16px;
   }
 .benefits-item {
@@ -83,6 +83,35 @@ letter-spacing: -0.02em;
   .benefits-btn {
     margin-top: 64px;
   }
+  .btn-scroll-top {
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    z-index: 20;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 50%;
+    transition: fill 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41),
+        border 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
+.btn-scroll-top-icon {
+    fill: rgba(252, 249, 249, 0.4);
+    transition: fill 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
+.btn-scroll-top:hover,
+.btn-scroll-top:focus {
+    fill: var(--color-button);
+    border: 1px solid var(--color-button);
+}
+.is-btnshow {
+    opacity: 1;
+    transition: opacity 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
+.is-btnshow-hide {
+    opacity: 0;
+}
 }
 
 

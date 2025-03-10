@@ -1,10 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const benefitsBtn = document.querySelector(".benefits-btn");
-    const targetSection = document.querySelector("#projects");
-  
-    if (benefitsBtn && targetSection) {
-      benefitsBtn.addEventListener("click", () => {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      });
-    }
+const ScrollBtnHero = document.querySelector('.btn-scroll-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    ScrollBtnHero.classList.remove('is-btnshow-hide');
+  } else {
+    ScrollBtnHero.classList.add('is-btnshow-hide');
+  }
+});
+ScrollBtnHero.onclick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
   });
+};
