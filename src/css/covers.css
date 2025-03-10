@@ -1,7 +1,5 @@
 .covers {
     position: relative;
-    background: url('../img/covers/elements_vectors-min.png') repeat center center;
-    background-size: contain;
     padding: 60px 0px;
     overflow: hidden;
 }
@@ -9,6 +7,8 @@
 .content {
     position: relative;
     overflow: hidden;
+    background: url('../img/covers/elements_vectors-min.png') repeat center center;
+    background-size: contain;
 }
 
 .marquee {
@@ -22,7 +22,6 @@
     font-size: 34px;
     text-transform: uppercase;
     animation: marqueeLine 30s linear infinite;
-    /* Швидкість анімації */
     white-space: nowrap;
     will-change: transform;
 }
@@ -54,7 +53,6 @@
 
 .marquee__inner {
     min-width: 200vw;
-    /* Подвоєна ширина для безшовного ефекту */
     height: 40vh;
     display: flex;
     flex-wrap: nowrap;
@@ -64,9 +62,9 @@
 }
 
 /* Mobile */
-@media (max-width: 375px) {
+
     .covers {
-        padding: 40px 0px;
+        padding: 32px 0px;
     }
 
     .marquee {
@@ -94,12 +92,13 @@
         object-fit: cover;
         object-position: center;
     }
-}
+
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1440px) {
+
+@media screen and (min-width: 768px){
     .covers {
-        padding: 50px 0px;
+        padding: 96px 0px;
     }
 
     .marquee {
@@ -114,9 +113,10 @@
 }
 
 /* Desktop */
-@media (min-width: 1440px) {
+
+@media screen and (min-width: 1440px) {
     .covers {
-        padding: 60px 0px;
+        padding: 96px 0px;
     }
 
     .marquee {
