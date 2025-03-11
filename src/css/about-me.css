@@ -1,8 +1,3 @@
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 1440px) {
-}
-
 .about-me {
   padding-top: 64px;
   padding-bottom: 32px;
@@ -22,7 +17,7 @@
 .about-me-text {
   min-height: 500px;
   border-radius: 24px;
-  background-color: #242527;
+  background-color: var(--color-cards);
   padding: 32px;
 }
 .about-me-title {
@@ -35,11 +30,11 @@
 }
 
 .title-part-funct {
-  color: #ed3b44;
+  color: var(--color-button);
 }
 
 .title-part-web {
-  color: rgba(250, 250, 250, 0.4);
+  color: var(--color-text-title);
 }
 
 .about-me-image {
@@ -97,8 +92,6 @@
     font-size: 38px;
   }
 
-  .about-me-image {
-  }
 
   .about-me-img {
     width: 680px;
@@ -108,9 +101,6 @@
 
 /* ABOUT */
 
-/* ABOUT-information */
-.information {
-}
 
 .information-item {
   padding-bottom: 20px;
@@ -177,9 +167,6 @@
   margin-bottom: 32px;
 }
 
-@media screen and (min-width: 768px) {
-}
-
 @media only screen and (min-width: 1440px) {
   .information-content {
     width: 612px;
@@ -205,7 +192,7 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   height: 130px;
-  border: 1px solid #fafafa33;
+  border: 1px solid var(--color-border);
   border-radius: 50%;
   display: flex;
   justify-content: center;
