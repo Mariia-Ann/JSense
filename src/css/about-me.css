@@ -155,6 +155,10 @@
   transform: rotate(180deg);
 }
 
+.information-content {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .information-content-list {
   display: flex;
   flex-direction: column;
@@ -216,7 +220,6 @@
 
 .skills-button {
   background-color: transparent;
-  /* display: flex; */
   width: 28px;
   height: 28px;
   position: absolute;
