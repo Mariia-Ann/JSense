@@ -1,0 +1,251 @@
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1440px) {
+}
+
+.about-me {
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-me-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-me-text {
+  min-height: 500px;
+  border-radius: 24px;
+  background-color: #242527;
+  padding: 32px;
+}
+.about-me-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--main-text);
+}
+
+.title-part-funct {
+  color: #ed3b44;
+}
+
+.title-part-web {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.about-me-image {
+  border-radius: 24px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.about-me-img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me {
+    padding-bottom: 48px;
+  }
+
+  .about-me-container {
+    gap: 64px;
+  }
+
+  .about-me-text {
+    height: 700px;
+    padding: 64px;
+  }
+
+  .about-me-title {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me {
+    padding-top: 96px;
+    padding-bottom: 82px;
+  }
+  .about-me-container {
+    gap: 96px;
+  }
+
+  .about-me-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .about-me-text {
+    width: 680px;
+    height: 700px;
+    padding: 64px;
+  }
+  .about-me-title {
+    font-size: 38px;
+  }
+
+  .about-me-image {
+  }
+
+  .about-me-img {
+    width: 680px;
+    height: 700px;
+  }
+}
+
+/* ABOUT */
+
+/* ABOUT-information */
+.information {
+}
+
+.information-item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+.information-item:not(:first-child) {
+  padding-top: 20px;
+}
+
+.information-about-blok {
+  display: flex;
+  margin-bottom: 12px;
+}
+.information-about-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-title);
+}
+
+.about-button {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-icon {
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  stroke: var(--color-text);
+  transition: transform 0.3s ease-in-out;
+  fill: transparent;
+}
+
+.about-icon.open {
+  transform: rotate(180deg);
+}
+
+.information-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.information-content-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.about-margin {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1440px) {
+  .information-content {
+    width: 612px;
+    margin-left: auto;
+  }
+}
+
+/* SKILLS */
+
+.skills {
+  padding-right: 83px;
+  position: relative;
+}
+
+.skills-list {
+  display: flex;
+}
+
+.skills .skill-item {
+  color: var(--main-text);
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  height: 130px;
+  border: 1px solid #fafafa33;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.skills .skill-item.swiper-slide-active {
+  background-color: var(--color-button);
+  border: none;
+}
+
+.skills-button {
+  background-color: transparent;
+  /* display: flex; */
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  cursor: pointer;
+}
+
+.skills-icon {
+  fill: none;
+  stroke: var(--color-arrow);
+  border: 2px solid var(--arrow);
+}
+
+@media only screen and (min-width: 768px) {
+  .skills {
+    padding-right: 104px;
+  }
+
+  .skills .skill-item {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .skills {
+    padding-right: 144px;
+    padding-left: 32px;
+  }
+}
