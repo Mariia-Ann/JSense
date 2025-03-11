@@ -105,5 +105,88 @@
     }
 }
 
+/* Цвето регулировка */
 
 
+.color-menu-btn {
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    background: var(--color-text-title);
+    border-radius: 50%;
+    border: none;
+    transition: 0.3s;
+    font-size: 20px;
+    backdrop-filter: blur(5px);
+    transform: translateY(-50%);
+}
+
+.color-menu-btn:hover {
+    background: var(--color-text-tr);
+}
+
+/* Меню выбора цвета */
+.color-picker {
+    position: fixed;
+    top: 50%;
+    right: 80px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background:var(--color-background);
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transform: translateY(-50%);
+}
+
+/* Цветные кружки */
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-menu-container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+:root {
+    --color-button: #ED3B44;
+    --color-button-active: #E0373F;
+}
+
+.theme-green {
+    --color-button: #3CBC81;
+    --color-button-active: #36A36F;
+}
+
+.theme-blue {
+    --color-button: #3B82F6;
+    --color-button-active: #316DD4;
+}
+
+.theme-orange {
+    --color-button: #F97316;
+    --color-button-active: #D65C14;
+}
+
+.theme-khaki {
+    --color-button: #B5A642;
+    --color-button-active: #9A8C38;
+}
+
+.theme-yellow {
+    --color-button: #FACC15;
+    --color-button-active: #E0B814;
+}
