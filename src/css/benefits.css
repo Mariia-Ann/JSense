@@ -4,9 +4,9 @@
   padding-bottom: 32px;
 }
 .benefits-container {
-display: inline-flex;
+display: flex;
 flex-direction: column;
-align-items: flex-start;
+
 gap: 32px;
 }
 
@@ -21,7 +21,7 @@ text-transform: uppercase;
 .benefits-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
   }
 .benefits-item {
@@ -65,7 +65,9 @@ letter-spacing: -0.02em;
 }.benefits-btn:hover {
   border: 1px solid var(--color-text);
 }
-
+.btn-scroll-top {
+  display: none;
+}
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
@@ -83,6 +85,36 @@ letter-spacing: -0.02em;
   .benefits-btn {
     margin-top: 64px;
   }
+  .btn-scroll-top {
+    display: inline-flex;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    z-index: 20;
+    transition: transform 0.2ms cubic-bezier(0.34, 0.78, 0.68, 0.41);
+  }
+  .btn-scroll-top-icon {
+  background-color: var(--color-button);
+  border-radius: 60px;
+  stroke: var(--color-text);
+  padding: 7px;
+  fill: none;
+  }
+  .is-btnshow {
+    opacity: 1;
+    transition: opacity 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+  }
+  .is-btnshow-hide {
+    opacity: 0;
+  }
+  
+  .btn-scroll-top:hover {
+  transform: translateY(-5px); /* кнопка "пригинається" на 5px вверх */
+  }
+  
 }
 
 
