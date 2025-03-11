@@ -15,8 +15,10 @@
   --color-border: rgba(250, 250, 250, 0.20); /*20% прозорості*/
   --color-border-icon: rgba(250, 250, 250, 0.50);
   --color-hashtags: rgba(28, 29, 32, 0.20);
+  --color-box: rgba(28, 29, 32, 0.10);
   --color-valid-email: #3CBC81;
   --color-invalid-email: #E74A3B;
+  --color-backdrop: rgba(15, 15, 16, 0.6);
 }
 
 
