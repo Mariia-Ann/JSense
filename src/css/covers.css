@@ -8,7 +8,7 @@
     height: 508px;
     position: relative;
     overflow: hidden;
-    background: url('./img/covers/elements_vectors-min.png') repeat center center;
+    background: url('../img/covers/elements_vectors-min.png') repeat center center;
     background-size: contain;
 }
 
@@ -18,8 +18,6 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-family: "Pridi", sans-serif;
-    font-weight: 600;
     font-size: 34px;
     text-transform: uppercase;
     animation: marqueeLine 30s linear infinite;
@@ -54,7 +52,7 @@
 
 .marquee__inner {
     min-width: 200vw;
-    height: 40vh;
+    height: 200px;
     display: flex;
     flex-wrap: nowrap;
     transform: rotate(17deg);
@@ -110,6 +108,10 @@
     .marquee__item {
         width: 544px;
         height: 314px;
+    }
+
+    .marquee__inner {
+        height: 360px;
     }
 }
 
