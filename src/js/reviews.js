@@ -22,7 +22,7 @@ function countSlidesPerView() {
   }
 }
 
-const swiper = new Swiper('.swiper', {
+const swiper2 = new Swiper('.swiper2', {
   direction: 'horizontal',
   slidesPerView: countSlidesPerView(),
   spaceBetween: 16,
@@ -31,8 +31,8 @@ const swiper = new Swiper('.swiper', {
     hide: true,
   },
   navigation: {
-    nextEl: '.right-btn',
-    prevEl: '.left-btn',
+    nextEl: '.right-btn2',
+    prevEl: '.left-btn2',
   },
   speed: 750,
   keyboard: {
@@ -43,8 +43,8 @@ const swiper = new Swiper('.swiper', {
 });
 
 function handleResize() {
-  swiper.params.slidesPerView = countSlidesPerView();
-  swiper.update();
+  swiper2.params.slidesPerView = countSlidesPerView();
+  swiper2.update();
 }
 
 window.addEventListener('resize', handleResize);
