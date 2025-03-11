@@ -66,6 +66,34 @@ letter-spacing: -0.02em;
   border: 1px solid var(--color-text);
 }
 
+.btn-scroll-top {
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 20;
+  transition: transform 0.2ms cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
+.btn-scroll-top-icon {
+background-color: var(--color-button);
+border-radius: 60px;
+stroke: var(--color-text);
+padding: 7px;
+fill: none;
+}
+.is-btnshow {
+  opacity: 1;
+  transition: opacity 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
+.is-btnshow-hide {
+  opacity: 0;
+}
+
+.btn-scroll-top:hover {
+transform: translateY(-5px); /* кнопка "пригинається" на 5px вверх */
+}
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
@@ -97,8 +125,12 @@ letter-spacing: -0.02em;
         border 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
 }
 .btn-scroll-top-icon {
-    fill: rgba(252, 249, 249, 0.4);
-    transition: fill 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+  background-color: var(--color-button);
+  border-radius: 60px;
+  stroke: var(--color-text);
+  padding: 7px;
+  fill: none;
+  transition: fill 0.2scubic-bezier(0.34, 0.78, 0.68, 0.41);
 }
 .btn-scroll-top:hover,
 .btn-scroll-top:focus {
