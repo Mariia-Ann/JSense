@@ -15,27 +15,27 @@
           <source
             media="(min-width: 1440px)"
             srcset="
-              ../img/about-me/portfolio-desktop.jpg   1x,
-              ../img/about-me/portfolio-desktop-2.jpg 2x
+              ./img/about-me/portfolio-desktop.jpg   1x,
+              ./img/about-me/portfolio-desktop-2.jpg 2x
             "
           />
           <source
             media="(min-width: 768px)"
             srcset="
-              ../img/about-me/portfolio-tablet.jpg   1x,
-              ../img/about-me/portfolio-tablet-2.jpg 2x
+              ./img/about-me/portfolio-tablet.jpg   1x,
+              ./img/about-me/portfolio-tablet-2.jpg 2x
             "
           />
           <source
             media="(max-width: 767.98px)"
             srcset="
-              ../img/about-me/portfolio-mob.jpg   1x,
-              ../img/about-me/portfolio-mob-2.jpg 2x
+              ./img/about-me/portfolio-mob.jpg   1x,
+              ./img/about-me/portfolio-mob-2.jpg 2x
             "
           />
           <img
             class="about-me-img"
-            src="../img/about-me/portfolio-mob.jpg"
+            src="./img/about-me/portfolio-mob.jpg"
             alt="Description of your image"
             width="343"
             height="500"
@@ -45,19 +45,17 @@
     </div>
 
     <ul class="information">
-      <li class="information-about">
-        <!-- <div class="information-about-blok"> -->
-        <button class="about-button" type="button">
-          <h4 class="information-about-title">About me</h4>
-          <div class="about-vector">
-            <svg class="about-vector-icon" width="20" height="20">
+      <li class="information-item">
+        <div class="information-about-blok">
+          <button class="about-button" type="button">
+            <h4 class="information-about-title">About me</h4>
+            <svg class="about-icon" width="20" height="20">
               <use href="./img/icons.svg#icon-icon-down"></use>
             </svg>
-          </div>
-        </button>
-        <!-- </div> -->
+          </button>
+        </div>
         <div class="information-content">
-          <p class="information-content-text">
+          <p class="information-content-text about-margin">
             I am Lloyd Jefferson, a talented programmer with extensive expertise
             in software development. I have an understanding of different
             programming languages and technologies, always ready to improve my
@@ -81,46 +79,46 @@
         </div>
       </li>
 
-      <li class="information-role">
-        <button class="about-button" type="button">
-          <h4 class="information-about-title">Role</h4>
-          <div class="about-vector">
-            <svg class="about-vector-icon" width="20" height="20">
+      <li class="information-item">
+        <div class="information-about-blok">
+          <button class="about-button" type="button">
+            <h4 class="information-about-title">Role</h4>
+            <svg class="about-icon" width="20" height="20">
               <use href="./img/icons.svg#icon-icon-down"></use>
             </svg>
-          </div>
-        </button>
+          </button>
+        </div>
 
-        <div class="role-content">
-          <ul class="role-additional">
-            <li class="information-content-link">Frontend development</li>
-            <li class="information-content-link">HeadlessCMS,Wordpress</li>
-            <li class="information-content-link">Blender(enjoy)</li>
+        <div class="information-content">
+          <ul class="information-content-list">
+            <li class="information-content-text">Frontend development</li>
+            <li class="information-content-text">HeadlessCMS,Wordpress</li>
+            <li class="information-content-text">Blender(enjoy)</li>
           </ul>
         </div>
       </li>
 
-      <li class="information-education">
-        <button class="about-button" type="button">
-          <h4 class="information-about-title">Education</h4>
-          <div class="about-vector">
-            <svg class="about-vector-icon" width="20" height="20">
+      <li class="information-item">
+        <div class="information-about-blok">
+          <button class="about-button" type="button">
+            <h4 class="information-about-title">Education</h4>
+            <svg class="about-icon" width="20" height="20">
               <use href="./img/icons.svg#icon-icon-down"></use>
             </svg>
-          </div>
-        </button>
+          </button>
+        </div>
 
-        <div class="education-content">
-          <ul class="education-additional">
-            <li class="information-content-link additional">
+        <div class="information-content">
+          <ul class="information-content-list">
+            <li class="information-content-text">
               2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
               York
             </li>
-            <li class="information-content-link additional">
+            <li class="information-content-text">
               2019 - 2020 / Advanced Web Development Certificate, GoIT IT
               School, New York
             </li>
-            <li class="information-content-link additional">
+            <li class="information-content-text">
               2020 - 2022 / Advanced Blender Animation Techniques, Udemy
             </li>
           </ul>
@@ -140,9 +138,10 @@
         <li class="skill-item">Adaptability</li>
         <li class="skill-item">Communication</li>
       </ul>
+
       <button class="skills-button" type="button">
-        <svg class="skills-icon" width="24" height="24">
-          <use href="./img/icons.svg##icon-arrow-narrow-right"></use>
+        <svg class="skills-icon" width="40" height="40">
+          <use href="./img/icons.svg#icon-arrow-narrow-right"></use>
         </svg>
       </button>
     </div>
