@@ -8,7 +8,7 @@
     height: 508px;
     position: relative;
     overflow: hidden;
-    background: url('./img/covers/elements_vectors-min.png') repeat center center;
+    background: url('../img/covers/elements_vectors-min.png') repeat center center;
     background-size: contain;
 }
 
