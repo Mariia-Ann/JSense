@@ -34,21 +34,17 @@ const swiper = new Swiper('.swiper-container', {
 
 
 
-swiper.on('slideChange', function () {
-  updateNavigationBtn();
-});
-
 function updateNavigationBtn() {
   if (swiper.isBeginning) {
-    refs.projectsBtnLeft.disabled = true; // Вимикаємо кнопку "ліво"
+    refs.projectsBtnLeft.disabled = true; 
   } else {
-    refs.projectsBtnLeft.disabled = false; // Увімкнути кнопку "ліво"
+    refs.projectsBtnLeft.disabled = false;
   }
 
   if (swiper.isEnd) {
-    refs.projectsBtnRight.disabled = true; // Вимикаємо кнопку "право"
+    refs.projectsBtnRight.disabled = true;
   } else {
-    refs.projectsBtnRight.disabled = false; // Увімкнути кнопку "право"
+    refs.projectsBtnRight.disabled = false;
   }
 }
 
