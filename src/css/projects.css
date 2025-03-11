@@ -48,6 +48,7 @@
     letter-spacing: -0.02em;
     border-radius: 60px;
     background-color: var(--color-button);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .projects-button:hover {
     background-color: var(--color-button-active);

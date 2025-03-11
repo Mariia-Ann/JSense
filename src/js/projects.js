@@ -1,11 +1,11 @@
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
-import { Navigation } from 'swiper/modules';
-import { refs } from './refs';
+
+const projectsBtnLeft = document.querySelector(".project-arrow-left");
+const projectsBtnRight = document.querySelector(".project-arrow-right");
 
 const swiper = new Swiper('.swiper-container', {
-  modules: [Navigation],
-  loop: false,
+  
   slidesPerView: 1,
   spaceBetween: 20,
   breakpoints: {
@@ -20,7 +20,6 @@ const swiper = new Swiper('.swiper-container', {
     }},
   speed: 900,
   effect: 'slide',
-  slideToClickedSlide: true,
   navigation: {
     nextEl: '.project-arrow-right',
     prevEl: '.project-arrow-left',
@@ -36,15 +35,15 @@ const swiper = new Swiper('.swiper-container', {
 
 function updateNavigationBtn() {
   if (swiper.isBeginning) {
-    refs.projectsBtnLeft.disabled = true; 
+    projectsBtnLeft.disabled = true; 
   } else {
-    refs.projectsBtnLeft.disabled = false;
+    projectsBtnLeft.disabled = false;
   }
 
   if (swiper.isEnd) {
-    refs.projectsBtnRight.disabled = true;
+    projectsBtnRight.disabled = true;
   } else {
-    refs.projectsBtnRight.disabled = false;
+    projectsBtnRight.disabled = false;
   }
 }
 
