@@ -93,7 +93,7 @@
 
 @media screen and (min-width: 768px){
     .covers {
-        padding: 96px 0px;
+        padding: 48px 0px;
     }
 
     .content {
@@ -118,7 +118,9 @@
 /* Desktop */
 
 @media screen and (min-width: 1440px) {
-    
+    .covers {
+        padding: 82px 0px;
+    }
     .content {
         height: 960px;
     }
