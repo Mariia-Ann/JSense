@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   const backdrop = document.getElementById('backdrop');
   const closeButton = document.querySelector('.close-button');
-
   const emailInput = contactForm.querySelector('#email');
   const messageInput = contactForm.querySelector('#message');
 
+  const notificationContainer = document.createElement('div');
+  notificationContainer.classList.add('notification-container');
+  document.body.appendChild(notificationContainer);
+
   emailInput.addEventListener('focus', handleFocus);
   emailInput.addEventListener('blur', handleEmailBlur);
-
   messageInput.addEventListener('focus', handleFocus);
   messageInput.addEventListener('blur', handleMessageBlur);
 
@@ -17,19 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     event.target.classList.remove('invalid');
   }
 
-  function handleEmailBlur(event) {
-    const input = event.target;
-    if (!input.checkValidity()) {
-      input.classList.add('invalid');
-      displayErrorMessage('Please enter a valid email address');
+  function handleEmailBlur() {
+    if (!emailInput.validity.valid) {
+      emailInput.classList.add('invalid');
+      showNotification('Invalid email address!', 'error');
     }
   }
 
-  function handleMessageBlur(event) {
-    const input = event.target;
-    if (!input.value.trim()) {
-      input.classList.add('invalid');
-      displayErrorMessage('Please enter a message');
+  function handleMessageBlur() {
+    if (!messageInput.value.trim()) {
+      messageInput.classList.add('invalid');
+      showNotification('Please enter a message.', 'error');
     }
   }
 
@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = emailInput.value.trim();
     const comment = messageInput.value.trim();
 
-    if (!emailInput.checkValidity()) {
-      displayErrorMessage('Please enter a valid email address.', 'Error');
+    if (!emailInput.validity.valid) {
+      showNotification('Invalid email address!', 'error');
       return;
     }
 
     if (!comment) {
-      displayErrorMessage('Please enter a message.', 'Error');
+      showNotification('Please enter a message.', 'error');
       return;
     }
 
@@ -57,36 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://portfolio-js.b.goit.study/api/requests',
         {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         }
       );
 
       if (!response.ok) {
-        const errorData = await response.json();
-        console.error('Server response:', errorData);
-        throw new Error('Network response was not ok');
+        throw new Error('Server error occurred.');
       }
 
       openModal();
       contactForm.reset();
     } catch (error) {
-      displayErrorMessage(
-        'Failed to send the message. Please try again later.',
-        'Error'
+      showNotification(
+        error.message || 'Failed to send the message. Please try again.',
+        'error'
       );
-      console.error('Error fetching data:', error);
     }
   });
 
-  closeButton.addEventListener('click', () => {
-    closeModal();
-  });
-
-  window.addEventListener('click', event => {
-    if (event.target === modal) {
+  closeButton.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', event => {
+    if (event.target === backdrop) {
       closeModal();
     }
   });
@@ -99,14 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModal() {
     backdrop.classList.add('is-hidden');
+    document.body.style.overflow = '';
     document.removeEventListener('keydown', handleKeyDown);
   }
 
   function handleKeyDown(event) {
-    console.log('Key pressed:', event.key);
     if (event.key === 'Escape') {
       closeModal();
     }
   }
-  backdrop.addEventListener('click', closeModal);
+
+  function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.classList.add('notification', type);
+    notification.textContent = message;
+    notificationContainer.appendChild(notification);
+
+    setTimeout(() => {
+      notification.remove();
+    }, 3000);
+  }
 });
