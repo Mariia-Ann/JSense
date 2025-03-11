@@ -105,8 +105,6 @@
     }
 }
 
-/* Цвето-регулировка */
-
 .color-menu-btn {
     width: 25px;
     height: 25px;
@@ -124,7 +122,6 @@
     background: var(--color-text-tr);
 }
 
-/* Меню выбора цвета */
 .color-picker {
     position: fixed;
     top: 50%;
@@ -139,7 +136,6 @@
     transform: translateY(-50%);
 }
 
-/* Цветные кружки */
 .color-option {
     width: 40px;
     height: 40px;
@@ -160,32 +156,3 @@
     transform: translateY(-50%);
 }
 
-:root {
-    --color-button: #ED3B44;
-    --color-button-active: #E0373F;
-}
-
-.theme-green {
-    --color-button: #3CBC81;
-    --color-button-active: #36A36F;
-}
-
-.theme-blue {
-    --color-button: #3B82F6;
-    --color-button-active: #316DD4;
-}
-
-.theme-orange {
-    --color-button: #F97316;
-    --color-button-active: #D65C14;
-}
-
-.theme-khaki {
-    --color-button: #B5A642;
-    --color-button-active: #9A8C38;
-}
-
-.theme-yellow {
-    --color-button: #FACC15;
-    --color-button-active: #E0B814;
-}

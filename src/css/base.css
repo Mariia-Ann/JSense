@@ -21,6 +21,30 @@
   --color-backdrop: rgba(15, 15, 16, 0.6);
 }
 
+.theme-green {
+  --color-button: #3CBC81;
+  --color-button-active: #36A36F;
+}
+
+.theme-blue {
+  --color-button: #3B82F6;
+  --color-button-active: #316DD4;
+}
+
+.theme-orange {
+  --color-button: #F97316;
+  --color-button-active: #D65C14;
+}
+
+.theme-khaki {
+  --color-button: #B5A642;
+  --color-button-active: #9A8C38;
+}
+
+.theme-yellow {
+  --color-button: #FACC15;
+  --color-button-active: #E0B814;
+}
 
 @font-face {
   font-display: swap;
