@@ -147,9 +147,12 @@
   height: 40px;
   padding: 10px;
   stroke: var(--color-text);
+  transition: transform 0.3s ease-in-out;
+  fill: transparent;
 }
 
-.information-content {
+.about-icon.open {
+  transform: rotate(180deg);
 }
 
 .information-content-list {
@@ -183,53 +186,66 @@
 /* SKILLS */
 
 .skills {
-  display: flex;
-  overflow-x: hidden;
-  justify-content: space-between;
-  align-items: center;
+  padding-right: 83px;
+  position: relative;
 }
 
 .skills-list {
   display: flex;
 }
 
-.skill-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  background-color: 0;
+.skills .skill-item {
   color: var(--main-text);
   font-weight: 500;
   line-height: 150%;
   font-size: 16px;
   letter-spacing: -0.02em;
+  height: 130px;
+  border: 1px solid #fafafa33;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
 }
 
-.skill-item.red {
+.skills .skill-item.swiper-slide-active {
   background-color: var(--color-button);
+  border: none;
 }
 
 .skills-button {
   background-color: transparent;
-  display: flex;
+  /* display: flex; */
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  cursor: pointer;
 }
 
 .skills-icon {
-  fill: transparent;
+  fill: none;
   stroke: var(--color-arrow);
   border: 2px solid var(--arrow);
 }
 
 @media only screen and (min-width: 768px) {
-  .skill-item {
+  .skills {
+    padding-right: 104px;
+  }
+
+  .skills .skill-item {
     width: 200px;
     height: 200px;
     font-size: 20px;
   }
 }
 @media only screen and (min-width: 1440px) {
+  .skills {
+    padding-right: 144px;
+    padding-left: 32px;
+  }
 }
