@@ -5,6 +5,7 @@
 }
 
 .content {
+    height: 508px;
     position: relative;
     overflow: hidden;
     background: url('../img/covers/elements_vectors-min.png') repeat center center;
@@ -97,6 +98,10 @@
         padding: 96px 0px;
     }
 
+    .content {
+        height: 960px;
+    }
+
     .marquee {
         font-size: 30px;
         gap: 24px;
@@ -111,6 +116,10 @@
 /* Desktop */
 
 @media screen and (min-width: 1440px) {
+    
+    .content {
+        height: 960px;
+    }
 
     .marquee {
         font-size: 34px;
