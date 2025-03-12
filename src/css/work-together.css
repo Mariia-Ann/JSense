@@ -105,7 +105,7 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 64;
+  gap: 64px;
   padding: 64px 32px;
   box-sizing: border-box;
   border: 1px solid var(--color-box);
