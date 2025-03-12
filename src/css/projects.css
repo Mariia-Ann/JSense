@@ -3,6 +3,7 @@
   }
   
   .projects-title {
+    font-size: 16px;
     color: var(--color-text-title);
     font-weight: 600;
     letter-spacing: -0.02em;
