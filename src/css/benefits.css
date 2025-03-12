@@ -126,7 +126,7 @@ letter-spacing: -0.02em;
     padding-bottom: 82px;
   }
   .benefits-container {
-    display: inline-flex;
+    
     flex-direction: row;
     align-items: flex-start;
     gap: 0;
