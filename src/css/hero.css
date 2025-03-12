@@ -55,7 +55,7 @@
 
 .hero-email:hover,
 .hero-socials li a:hover {
-    border-color: 1px solid var(--color-text);
+    border: 1px solid var(--color-text);
     
 }
 
