@@ -1,13 +1,13 @@
-
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-
 const slideContainer = document.querySelector('.container');
-const reviemList = document.querySelector('.reviews-list');
+const reviewList = document.querySelector('.reviews-list');
 const notFoundLabel = document.querySelector('.not-found');
+
+// let swiper2;
 
 function countSlidesPerView() {
   const containerWidth = slideContainer.clientWidth;
@@ -20,27 +20,68 @@ function countSlidesPerView() {
   } else if (containerWidth === 1440) {
     return 4;
   }
-}
+ }
+
+ 
 
 const swiper2 = new Swiper('.swiper2', {
   direction: 'horizontal',
   slidesPerView: countSlidesPerView(),
   spaceBetween: 16,
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    hide: true,
+  loop: true, 
+  freeMode: true,
+  speed: 900,
+  freeModeMomentum: false,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: true
   },
   navigation: {
     nextEl: '.right-btn2',
     prevEl: '.left-btn2',
+    disabledClass: 'swiper-button-disabled' 
   },
-  speed: 750,
   keyboard: {
     enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true
   },
-  grabCursor: true,
-  simulateTouch: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    }
+  },
+  on: {
+    slideChange: function() {
+      const nextButton = document.querySelector('.right-btn2');
+      const prevButton = document.querySelector('.left-btn2');
+      
+      
+      if (this.isBeginning) {
+        prevButton.classList.add('swiper-button-disabled');
+        prevButton.setAttribute("disabled", "true");
+      } else {
+        prevButton.classList.remove('swiper-button-disabled');
+        prevButton.removeAttribute("disabled");
+      }
+
+      
+      if (this.isEnd) {
+        nextButton.classList.add('swiper-button-disabled');
+        nextButton.setAttribute("disabled", "true");
+      } else {
+        nextButton.classList.remove('swiper-button-disabled');
+        nextButton.removeAttribute("disabled");
+      }
+    }
+  }
 });
+
 
 function handleResize() {
   swiper2.params.slidesPerView = countSlidesPerView();
@@ -48,7 +89,6 @@ function handleResize() {
 }
 
 window.addEventListener('resize', handleResize);
-
 
 async function fetchReviews() {
   try {
@@ -76,8 +116,11 @@ const renderReviews = (data) => {
       <h3 class="reviews-head">${element.author}</h3>
       <p class="reviews-text">${element.review}</p>  
     </li>`;
-    reviemList.insertAdjacentHTML('beforeend', markup);
+    reviewList.insertAdjacentHTML('beforeend', markup);
+  
   });
+    // swiper2.update()
 }
 
 fetchReviews();
+
