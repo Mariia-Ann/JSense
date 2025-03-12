@@ -84,7 +84,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* Styles for Tablet devices */
+
 @media only screen and (min-width: 768px) {
   .faq-section {
     padding-top: 48px;
@@ -102,7 +102,6 @@
   }
 }
 
-/* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   .faq-section {
     padding-top: 82px;
@@ -122,7 +121,6 @@
     padding-right: 0;
   }
 
-  /*зміна позицій */
   .faq-item:nth-child(1) {
     order: 1;
   }
@@ -141,7 +139,7 @@
   .faq-item:nth-child(5) {
     order: 4;
   }
-  /* Першийй стовпець: прибираємо правий бордер, додаємо відступ ліворуч  */
+  
   .faq-item:nth-child(4),
   .faq-item:nth-child(5),
   .faq-item:nth-child(6):nth-child(even) {
@@ -150,7 +148,7 @@
     border-left: 1px solid var(--color-border);
   }
 
-  /* Другий стовпець: прибираємо правий бордер, додаємо відступ ліворуч  */
+  
   .faq-item:nth-child(1),
   .faq-item:nth-child(2),
   .faq-item:nth-child(3):nth-child(odd) {
