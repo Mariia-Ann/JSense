@@ -164,6 +164,9 @@
   }
   
   @media screen and (min-width: 1440px) {
+        .projects-hashtags-list {
+        margin-bottom: 164px;
+    }
     .projects-section {
       padding: 82px 0;
     }
