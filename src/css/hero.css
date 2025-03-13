@@ -3,6 +3,7 @@
     background: url("../img/hero/hero-1.webp")no-repeat center center/cover;
     background-position-x: 39%;
     padding: 281px 0 32px;
+    margin-top: -32px;
 }
 
 .hero.image-1 {
