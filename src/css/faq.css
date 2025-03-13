@@ -48,8 +48,9 @@
   border-radius: 50%;
 }
 .faq-vector-icon {
+  fill: transparent;
   stroke: var(--color-text);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   padding: 7px;
 }
 
@@ -61,8 +62,14 @@
   letter-spacing: -0.02em;
   color: var(--color-text-tr);
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  flex-shrink: 0;
+  transition: max-height 0.5s ease-in-out 0.2s, opacity 0.5s ease-in-out 0.2s;
+  max-height: 0;
+  opacity: 0;
+}
+
+.faq-text:not(.hidden) {
+  max-height: 500px;
+  opacity: 1;
 }
 .hidden {
   position: absolute;
@@ -77,7 +84,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* Styles for Tablet devices */
+
 @media only screen and (min-width: 768px) {
   .faq-section {
     padding-top: 48px;
@@ -95,7 +102,6 @@
   }
 }
 
-/* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   .faq-section {
     padding-top: 82px;
@@ -103,7 +109,7 @@
   }
   .faq-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Два стовпці */
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
 
@@ -115,7 +121,6 @@
     padding-right: 0;
   }
 
-  /*зміна позицій */
   .faq-item:nth-child(1) {
     order: 1;
   }
@@ -134,7 +139,7 @@
   .faq-item:nth-child(5) {
     order: 4;
   }
-  /* Першийй стовпець: прибираємо правий бордер, додаємо відступ ліворуч */
+  
   .faq-item:nth-child(4),
   .faq-item:nth-child(5),
   .faq-item:nth-child(6):nth-child(even) {
@@ -143,7 +148,7 @@
     border-left: 1px solid var(--color-border);
   }
 
-  /*Другий стовпець: прибираємо правий бордер, додаємо відступ ліворуч */
+  
   .faq-item:nth-child(1),
   .faq-item:nth-child(2),
   .faq-item:nth-child(3):nth-child(odd) {
