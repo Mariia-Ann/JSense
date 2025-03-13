@@ -245,8 +245,7 @@
   }
 
   .reviews-item {
-    flex-direction: column;
-    width: 332px;
+  width: 332px;
   }
 }
 
