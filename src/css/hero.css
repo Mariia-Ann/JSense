@@ -79,6 +79,7 @@
     .hero-title {
         font-size: 90px;
         margin-bottom: 187px;
+        text-transform: uppercase;
     }
 
     .hero-footer {
