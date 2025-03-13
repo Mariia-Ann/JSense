@@ -202,11 +202,11 @@
     gap: 40px;
   }
   #left-btn2,
-#right-btn2 {
-  padding: 18px;
-  width: 68px;
-  height: 68px;
-}
+  #right-btn2 {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
   .reviews-list {
     padding-left: 0;
     display: flex;
@@ -245,7 +245,8 @@
   }
 
   .reviews-item {
-  width: 332px;
+    flex-direction: column;
+    width: 332px;
   }
 }
 
