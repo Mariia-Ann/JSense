@@ -3,7 +3,6 @@
     background: url("../img/hero/hero-1.webp")no-repeat center center/cover;
     background-position-x: 39%;
     padding: 281px 0 32px;
-    position: relative;
 }
 
 .hero-title {
@@ -70,7 +69,9 @@
 }
 
 @media only screen and (min-width: 768px) {
-
+.hero-container {
+    position: relative;
+}
     .hero {
         padding: 300px 0 32px;
     }
@@ -119,6 +120,7 @@
 }
 
 .color-menu-btn {
+    position: relative;
     width: 25px;
     height: 25px;
     align-items: center;
@@ -168,7 +170,7 @@
 
 .color-menu-container {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 20px;
     transform: translateY(-50%);
 }
