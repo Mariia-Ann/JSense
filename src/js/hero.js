@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     colorMenuBtn.addEventListener("click", () => {
-        colorPicker.style.display = colorPicker.style.display === "flex" ? "none" : "flex";
+        colorPicker.classList.toggle("visible"); 
     });
 
     colorOptions.forEach(option => {
@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const bgImage = backgroundImages[color];
 
             background.style.backgroundImage = `url('${bgImage}')`;
-
             localStorage.setItem("selectedBg", bgImage);
-            colorPicker.style.display = "none"; 
+
+            colorPicker.classList.remove("visible");
         });
     });
 
@@ -51,4 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
 
