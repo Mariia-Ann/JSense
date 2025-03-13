@@ -126,13 +126,31 @@
   background-color: inherit;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../img/header/bg-mobile@1x-min.jpg');
+  background-image: url('../img/hero/hero-1.webp');
 
-  @media (min-resolution: 2dppx) {
-    background-image: url('../img/header/bg-mobile@2x-min.jpg');
-    background-size: cover;
-  }
 }
+
+.header-burger-menu.image-2 {
+  background-image: url('../img/hero/hero-2.webp');
+}
+
+.header-burger-menu.image-3 {
+  background-image: url('../img/hero/hero-3.webp');
+}
+
+.header-burger-menu.image-4 {
+  background-image: url('../img/hero/hero-5.webp');
+}
+
+.header-burger-menu.image-5 {
+  background-image: url('../img/hero/hero-4.webp');
+}
+
+.header-burger-menu.image-6 {
+  background-image: url('../img/hero/hero-6.webp');
+}
+
+
 
 .header-burger-menu.is-open-header {
   transform: translateX(0);
