@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const colorPicker = document.querySelector(".color-picker");
 
     
-    const imageClasses = ["image-1", "image-2", "image-3", "image-4", "image-5"];
+    const imageClasses = ["image-1", "image-2", "image-3", "image-4", "image-5","image-6"];
 
     let currentImageIndex = 0;
 
