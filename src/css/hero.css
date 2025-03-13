@@ -1,6 +1,6 @@
 
 .hero {
-    background: url("../img/hero/hero-1.webp")no-repeat center center/cover;
+    background: url("../img/hero/hero-1j.jpg")no-repeat center center/cover;
     background-position-x: 39%;
     padding: 281px 0 32px;
     position: relative;
@@ -19,7 +19,9 @@
     display: flex;
     gap: 4px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
 }
 
 .hero-socials {

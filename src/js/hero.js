@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const colorPicker = document.querySelector(".color-picker");
 
     const backgroundImages = {
-        red: "../img/hero/hero-1.webp",
-        green: "../img/hero/hero-2.webp",
-        blue: "../img/hero/hero-3.webp",
-        orange: "../img/hero/hero-5.webp",
-        khaki: "../img/hero/hero-4.webp",
-        yellow: "../img/hero/hero-6.webp"
+        red: "/img/hero/hero-1.webp",
+        green: "/img/hero/hero-2.webp",
+        blue: "/img/hero/hero-3.webp",
+        orange: "/img/hero/hero-5.webp",
+        khaki: "/img/hero/hero-4.webp",
+        yellow: "/img/hero/hero-6.webp"
     };
 
     const savedBg = localStorage.getItem("selectedBg");
