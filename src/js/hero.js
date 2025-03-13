@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const colorOptions = document.querySelectorAll(".color-option");
     const colorMenuBtn = document.querySelector(".color-menu-btn");
     const colorPicker = document.querySelector(".color-picker");
+    const headerSection = document.querySelector(".header-burger-menu"); 
 
     
     const imageClasses = ["image-1", "image-2", "image-3", "image-4", "image-5","image-6"];
@@ -13,9 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function changeBackgroundImages(index) {
         imageClasses.forEach(imageClass => {
             heroSection.classList.remove(imageClass);
+            headerSection.classList.remove(imageClass);
         });
 
         heroSection.classList.add(imageClasses[index]);
+        headerSection.classList.add(imageClasses[index]);
     };
     
     const savedBgIndex = localStorage.getItem("selectedBg");
