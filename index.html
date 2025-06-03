@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/JSense/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Lloyd Jefferson</title>
+    <meta name="description"
+      content="JSense is a portfolio showcasing the work of a passionate full-stack developer. Explore various projects demonstrating frontend and backend development skills using modern technologies."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
+    <script type="module" crossorigin src="/JSense/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/JSense/assets/vendor-BNqUg-2H.js">
+    <link rel="stylesheet" crossorigin href="/JSense/assets/vendor-Oe9dJBh6.css">
+    <link rel="stylesheet" crossorigin href="/JSense/assets/index-DFkZg4GC.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container header-container">
+    <a href="./index.html" class="header-img-box">
+      <picture>
+        <source
+          srcset="/JSense/assets/jefferson-fWTj5Ygt.webp 1x, /JSense/assets/jefferson_2x-li5wGSDu.webp 2x"
+          type="image/webp"
+        />
+        <source
+          srcset="data:image/jpeg;base64,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 1x, data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAgICAgJCAkKCgkNDgwODRMREBARExwUFhQWFBwrGx8bGx8bKyYuJSMlLiZENS8vNUROQj5CTl9VVV93cXecnNEBCAgICAkICQoKCQ0ODA4NExEQEBETHBQWFBYUHCsbHxsbHxsrJi4lIyUuJkQ1Ly81RE5CPkJOX1VVX3dxd5yc0f/CABEIAKAAoAMBIgACEQEDEQH/xAAzAAABBAMBAAAAAAAAAAAAAAABAAIGBwMEBQgBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/aAAwDAQACEAMQAAAAv8LihuczGFQa5oNDgAGCOxcnEI48XZwi8nuEkHOx2I+gmqi8oqdLj5MbACE01zQbFOl53y2k2WJzrHo621rPiuRzJNARXR3/ADx6C6eXIirzHe4OcNlJXISQwCERKmr6rfl7cE70O1no/iS7hp17Gprwc9Yl6Bqa6+vhyojbnQKDfSVoJAEkkasU7fA5e7t7sR5pNk6FcRsqxuFGYvjvbtg0vKuvgngc28giA30haQQQkEHJhVl8vk9DdbqbVZxCLWTC8enegkz4qqQyKJz3r87KCNMgCEbwStJpCAggPP34SEtZVNpc3W+MyOL4dMdiE1i07WjJ8eTv8gBCpQIRuJMpPVbcsVvHzpB2emaCjrajDJo/gTvfZ8/yfh9GzI5Frqm5yzJi7fPASBJBG15vsqiNM9Vmzgc4sWTGqyOwZhZMbXMxscE10+YE7cm3m1J+uep4ytJO+gHJ0PBL7oXfBmrk15eNhaqRCDIg0WTHkYBZlwjKLgYMjQn/AKS8W+ppq1PKnq8VPg9voak2o0HNmiCgLmPaRbkExhAy5rgLJDbYVz7ET0//xABBEAACAQMCAwQIAwUECwAAAAABAgMABBEFEgYhMRNBUWEHECAiMkJxgRQwkRVSkqGxIzNiwVNUcnOUosLD0uHi/9oACAEBAAE/AKZlQFmIAq41RmysK4XxNSTzSHLyMfv6j7OPajuriL4JnH3q21xxhbhAR+8tI6OoZGBB7x6mYKpYnAFXV09w+TyUdF9g+u5uoraPc559yjqan4gkQjlAg79xLH9OVXWsXTw7xemMf4I/65Iq34h1QSERaikq+EsWf5g1ZcVWkmFuwIDnAf5SaVldVdGDKRkEHIPs2V7JayZBJQ/EtI6uiupyCMitVnJZYQeQ5n2icVrXEljYpIDIhkUfCQWq6197q8d55ESLlsiALZ3eHXHOtKaDUr4xzAEpgFVZwrjuODszWoyxaeqheSLyU9mZCvkcmmmU2wkg2TPt5rFsBFTXqy5iuIXQt0aRjzPgMdKsNZ1DS7llt7nfGCNyMMnB8fGtC1+DV4nGBHOnxx5zy/eXxHs6LckO1ufmGVqd98sjeLH2tfvlstPkbLb3BVAvU1eTz3NwXz4kL4DlyqK3M8qKSV3na2RglX6E/TkasbfUNPvUgSPOwHYxHn3A9KEV1PNlnZR3qxzn6jpX4WKApGkCM5PJQDtX+VX0XIxTsnT3XHLywetXy9nMJCejMA/ePFGx1FWV9NYar+Igf34pMjzXwOPEdagmSeGKZPgkQMPoRn2LWQxXELjuce3xVAZYIxyAO7meeKjhWOaVNjdQN3dyOfDNafo8dw9o4IUpMDJkcwu0/wBSKsbdLm6XAOyIKN3UmrjT4/fOcAtk1cxxQQsIwM+YB51cTys7JyZdh6/ET41dIjJc7vmXJ+o6GozIJYZF+UDB6816VoDiTRrFwMAoeX0Y/l65B21ix/cP8jyp9OEl0Tk7cjlyq3s2RHwFG/3unQqc5rTyYT2eAAOQFTLuWrqz3KxA51PZlHfkRV1blwx2cwM+RrT9JluZ4E2B0eRRjODzq2tYrS3ht4vgjUKPy73P4O4/3ZqG2AG7APPP/qrePf0HKltI1fcSc0+MZp5EB51qMsLPgEU8kDQMT41w72X7RgXx3EfUAmj+Xr2pHTtPMoiEjySJEiE4BLnHOr/8WX7C3uvw9wE3EIolQfxjupNN4tjZjFr8DkdFmtEAP3SpNZ4/snb8XodjNEp+OGTG79Xqfj7UXeO3/ZH4eZyQBNK+3A6tySta1q/imIkvQjqoYokLAAEbuvaVD+1H0yTUBiaBELttzG4VeZIB3A4FXOupOoWFJ9vVtxC4/TdXB+mX93O0sOpfh5Ik3AtAZGX+JhT6vxjpt1bQ31hY3UM1z2EcsDOjsSCwyPe8KP5WuaeNQ06WIDLoRLH5shyBV7dXMmsOFneCHKSZA5yJ1A8we+mVARs6dAfpTxpIhDAGtX062j1HRXEYVQ9zHyHe8Jb+iVdaJHe3YCRBRn3pCO7yrUoFTS/2RaLH216BBGveEP8AeOfILzzWu6ElnqloMbo3V0LYxhviA+nI4rg/sxLOqjpD/mKkAudat1HwWUbyOfCWYbEH2QsT9R+ZNZRRrOwgEgc7gCM7T4jvH2qF/wCyVd6sy8n28gD4YpHyKvLGK9jMcoO3kQQSpUqcggjoQa1n9pWISK31AsXOFzCm/wDUAL/y1YCHTOzvI7G6urp4wJriVgAniMuR9gtcSaxZXkssMQL8lO4csHcDmuFLCaXt2GpXaKIwCF7Hnk9MmMtVvbQWsXZwptXcWOSWLM3VmZslmPeTR/L1bUI9NsJbuTGxHiVieiiSRY9323ZqRAMnGDnnQ6ZFGT3DV2qJP+IlI90ci3QZrVddsQSgu0fkQU3ABaF9bSdlFFKh2jAy4JbxrhG2MWnySdzvy+1H8z0g6jDacO3NsXTtrvESIfDOWauD/SBA8EWm61KEkQBIrlujjwkrdzx1BwQfEUceNa3Hb3BWOYBocruQ/N9RWrJpOn6e3Yx7Y16JgYrbbcpXAZ3IA5AAA+FW0CW1rDCnREH3PUmj+RisVsOCcch1Na/xfo2h2295luZiSqQQurNuA+f90Vr2vXev3bXtxsBMKIiICFUKSadedaFxhq+iBYkk7a0/0EnQf7B6rWlca2t+jFS6sMbkfqPoRTTrc3CyGUOucBRz6muIbiKS3kUoNis4PnsGatUW4m0yONfeeRAq9OTHb30BtRVznAAzR9qeeC2hknuJUiiQZd3YKqjzJrUvSloVq5S0tp7vHz/3KGh6XrXYSdDk/wCI/wDitU9JvEV3kWk0VpH4RIC/3Z6vNX1K/Ob29muPOVy/9aQ5Do55OB73gRUJ5sp60/M86ao5XiYsjYyMVY8TzQEFmIOwjPXJq61173s7cSqqO+GZiQBuwCScdMCuD+GYbOKPUJbuC6lK4iaB98SDyamo+zLLFBDLNNIEijRndz0VVGSa4t4puteuzzeOzjJ7GH/rf/EaPvHyrOw+79xTYILKPqPCs0jlCMHkak+JXAxmt+4c6NH1CtM1rVdJl7WwvZYCeoU+631U8jWl+li/jwmqWMc4/fhPZvVp6SeFLn47ie28poj/ANvdVjrei6iQtnqdtM56Isg3/wAPWsev0l6ubbT4NMibD3J7SXyjTp+rU4OCfCim0AGnXvPQ9DQOxjnoeR+lEYJFd1IcoQaB2nFGj7XSuEvSLdWDx2esO89p0E3WWL/yWopYp4o5oZFkidQyOpyrA94NYrj17l+KtVW4GOzl7NF8I1Hu1IeXj7wFEryjflyyjf5GmJUlWH1HiKfw/T6UT0PqBo818xSmsDOaNAcs+vFEergjjOXQ7hbO8ctp0rc+8wk/OtWqrPLBsYMjlSGByCp55Br0ucOEzQazGDskAhuD4H5GqQMgMb9VIFOQwx1FOT8DdR0NE+o9B6lNdD6m60eSeoUBmiPeAo9TR616GH1K50GSS7TNvBKYrSQ1e2dreWk9pcxiSKZCjqe8GuM+Eb7h28eKXL2sjZtp/EeDeDU4ZGKuMGmw8Rz8Sf09fcPUKbpS1IOa0/QeoUOtSdRXnXBPBOocVagqIrR2MbD8Rcdw8l8Xqxs7TTrK3srOIR28CBI1HcB6r6xs9QtZbS8t0mgkGHRxkGuJvQ80od9Fn8xDMeY+jVqPC/EulORe6PdxY+fsyUP0YZFOpViCCCO4+seodKXkak+U0xoUKQFmwASaseFeJNUkRLLR7uXPfsKp92bArhz0LT7kn4huQif6rAck/V6sbGy060itbO3SC3jGEjQYA9X/xAAlEQACAgEDAwQDAAAAAAAAAAABAgARAyAhMQQQEhMwQWEyUYH/2gAIAQIBAT8A0M6ryZ6y3wYGDcHuDodjfiIxAliKd4jWN+ew0ZdnP3BRIuZBXAitMW5J1ZnXyAgUVyI4JIAEGIsdhMS+KkferqMRYhl/sBBHEewQdgIGA8amP8NXMYFTRmTergr9GIvioGijKgFRlDCiJl6duU3ETA+17aFHzrqV2+PZIgNe1//EACoRAAEDAwIEBQUAAAAAAAAAAAEAAhEDITESIAQQQYETMlFhsTAzQnHB/9oACAEDAQE/ANjWOdgLwHRkItc3I5kbKbLaimhzlBCcLYVRukyMbqEFg9k6RJCpnV5inMsq8AAdZ3cPSqeHrAsSY7IudOD8qnEST/PlOqtYLmFWdLwfbdwfEhjTTeJH498ogg5wVS6i5JujT805MR2Vf7h3YumODhIVK0wnadNnX/Se7U9zvU7JC1IklNcWmQVQ4phEPsfVVOIZcAzseem0cpU8jlDYEOYNkRP0v//Z 2x"
+        />
+        <img
+          class="header-image"
+          src="data:image/jpeg;base64,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"
+          alt="Jefferson logo"
+          width="80"
+          height="80"
+          loading="lazy"
+        />
+      </picture>
+      <div>
+        <svg class="header-name-icon">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-jefferson"></use>
+        </svg>
+      </div>
+    </a>
+
+    <nav class="header-menu-box">
+      <button class="header-menu-link" type="button" aria-label="Menu button">
+        Menu
+      </button>
+      <div class="header-drop-down">
+        <ul class="header-menu-list visually-hidden">
+          <li class="header-menu-list-item">
+            <a href="#about-me" class="header-list-item-link">About me</a>
+          </li>
+          <li class="header-menu-list-item">
+            <a href="#benefits" class="header-list-item-link">Benefits</a>
+          </li>
+          <li class="header-menu-list-item">
+            <a href="#projects" class="header-list-item-link">Projects</a>
+          </li>
+          <li class="header-menu-list-item">
+            <a href="#faq" class="header-list-item-link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="header-order-btn-box">
+      <a class="header-order-btn" href="#footer">Order the project</a>
+    </div>
+
+    <div class="header-burger-btn-box">
+      <button
+        class="header-burger-btn"
+        type="button"
+        aria-label="Mobile menu button"
+      >
+        <svg class="header-burger-icon" width="28" height="28">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!--Mobile Backdrop-->
+
+  <div class="header-burger-backdrop">
+    <div class="header-burger-menu">
+      <button class="header-close-btn" type="button" aria-label="Close button">
+        <svg class="header-close-icon" width="28" height="28">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+      <ul class="header-burger-menu-list">
+        <li class="header-burger-menu-list-item">
+          <a href="#about-me" class="header-burger-list-item-link">About me</a>
+        </li>
+        <li class="header-menu-list-item">
+          <a href="#benefits" class="header-burger-list-item-link">Benefits</a>
+        </li>
+        <li class="header-menu-list-item">
+          <a href="#projects" class="header-burger-list-item-link">Projects</a>
+        </li>
+        <li class="header-menu-list-item">
+          <a href="#faq" class="header-burger-list-item-link">FAQ</a>
+        </li>
+      </ul>
+      <div class="header-burger-order-btn-box">
+        <a class="header-burger-order-btn" href="#footer">Order the project</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      <section class="hero">
+    <div class="container hero-container">
+            <h1 class="hero-title">
+                Hello.<br />
+                I’m fullstack developer<br />
+                Lloyd Jefferson.
+            </h1>
+
+    <div class="color-menu-container">
+<button class="color-menu-btn hide-on-mobile" type="button"></button>
+
+    <div class="color-picker">
+        <div class="color-option" data-color="red" style="background-color: #ed3b44;"></div>
+        <div class="color-option" data-color="green" style="background-color: #c6e327;"></div>
+        <div class="color-option" data-color="blue" style="background-color: #0041e8;"></div>
+        <div class="color-option" data-color="orange" style="background-color: #e6533c;"></div>
+        <div class="color-option" data-color="khaki" style="background-color: #2b4441;"></div>
+        <div class="color-option" data-color="yellow" style="background-color: #ff7f08;"></div>
+    </div>
+    </div>
+        <div class="hero-footer">
+            <ul class="hero-socials">
+                <li><a href="https://www.instagram.com/goitclub/" target="_blank">IG</a></li>
+                <li><a href="https://www.facebook.com/goITclub/" target="_blank">FB</a></li>
+                <li><a href="https://www.youtube.com/c/GoIT" target="_blank">YT</a></li>
+                <li><a href="https://github.com/Mariia-Ann/JSense" target="_blank">GH</a></li>
+            </ul>
+            <a href="mailto:lloydjefferson@gmail.com" class="hero-email">lloydjefferson@gmail.com</a>
+
+        </div>
+    </div>
+</section>
+      <section class="about-me" id="about-me">
+  <div class="container about-me-container">
+    <h2 class="visually-hidden">About me</h2>
+    <div class="about-me-header">
+      <div class="about-me-text">
+        <h3 class="about-me-title">
+          I work with people all over the world to create impressive and
+          <span class="title-part-funct">functional</span>
+          <span class="title-part-web">websites</span> that reflect each
+          client's unique personality.
+        </h3>
+      </div>
+      <div class="about-me-image">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="/JSense/assets/portfolio-desktop-PMFq0LOd.jpg 1x, /JSense/assets/portfolio-desktop-2-BfwAlrra.jpg 2x"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/JSense/assets/portfolio-tablet-BybQTF5l.jpg 1x, /JSense/assets/portfolio-tablet-2-D_7Fq3An.jpg 2x"
+          />
+          <source
+            media="(max-width: 767.98px)"
+            srcset="/JSense/assets/portfolio-mob-CfI3q9US.jpg 1x, /JSense/assets/portfolio-mob-2-D4Be9gsN.jpg 2x"
+          />
+          <img
+            class="about-me-img"
+            src="/JSense/assets/portfolio-mob-CfI3q9US.jpg"
+            alt="Description of your image"
+            width="343"
+            height="500"
+          />
+        </picture>
+      </div>
+    </div>
+
+    <ul class="information">
+      <li class="information-item">
+        <div class="information-about-blok">
+          <button class="about-button" type="button">
+            <span class="information-about-title">About me</span>
+            <svg class="about-icon" width="20" height="20">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="information-content inform-block visually-hidden">
+          <p class="information-content-text about-margin">
+            I am Lloyd Jefferson, a talented programmer with extensive expertise
+            in software development. I have an understanding of different
+            programming languages and technologies, always ready to improve my
+            skills. I always follow the latest trends and look for
+            unconventional, creative solutions to problems. I have a high level
+            of analytical skills and am able to effectively solve even the most
+            difficult tasks encountered on the way.
+          </p>
+          <p class="information-content-text">
+            Able to work both independently and in a team. I can effectively
+            cooperate with colleagues, exchanging ideas and finding optimal
+            solutions. Professional maturity allows you to calmly cope with
+            challenges and stressful situations, while maintaining a high
+            quality of work. I am always looking for opportunities for
+            self-improvement. I actively study new technologies and practices to
+            stay abreast of the latest innovations. I have a strong
+            understanding of various programming languages, frameworks and
+            architectural concepts that allow me to create efficient and
+            scalable software.
+          </p>
+        </div>
+      </li>
+
+      <li class="information-item">
+        <div class="information-about-blok">
+          <button class="about-button" type="button">
+            <span class="information-about-title">Role</span>
+            <svg class="about-icon" width="20" height="20">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="information-content">
+          <ul class="information-content-list inform-block visually-hidden">
+            <li class="information-content-text">Frontend development</li>
+            <li class="information-content-text">HeadlessCMS,Wordpress</li>
+            <li class="information-content-text">Blender(enjoy)</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="information-item">
+        <div class="information-about-blok">
+          <button class="about-button" type="button">
+            <span class="information-about-title">Education</span>
+            <svg class="about-icon" width="20" height="20">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="information-content">
+          <ul class="information-content-list inform-block visually-hidden">
+            <li class="information-content-text">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </li>
+            <li class="information-content-text">
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </li>
+            <li class="information-content-text">
+              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <div class="skills">
+      <div class="skills-slider swiper">
+        <ul class="skills-list swiper-wrapper">
+          <li class="skill-item swiper-slide">HTML/CSS</li>
+          <li class="skill-item swiper-slide">JavaScript</li>
+          <li class="skill-item swiper-slide">React</li>
+          <li class="skill-item swiper-slide">Node. js</li>
+          <li class="skill-item swiper-slide">React Native</li>
+          <li class="skill-item swiper-slide">Soft skills</li>
+          <li class="skill-item swiper-slide">Teamwork</li>
+        </ul>
+      </div>
+      <button class="skills-button" type="button">
+        <svg class="skills-icon" width="40" height="40">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="benefits-section" id="benefits">
+  <div class="container benefits-container">
+       <div class="benefits-left">
+        <h2 class="benefits-chapter">Benefits of working with me</h2>
+      </div>
+
+        <div class="benefits-right">
+            <ul class="benefits-list">
+                <li class="benefits-item"> 
+                    <svg class="benefits-icon" width="24" height="24">
+                        <use href="/JSense/assets/icons-DflH_i02.svg#icon-services-user"></use>
+                      </svg>
+
+                    <h3 class="benefits-title">Expertise</h3>
+                    <p class="benefits-text">As a highly experienced developer, I have deep knowledge of programming and website development.</p>
+                </li>
+                <li class="benefits-item"> 
+                    <svg class="benefits-icon" width="24" height="24">
+                        <use href="/JSense/assets/icons-DflH_i02.svg#icon-services-chat"></use>
+                      </svg>
+
+                    <h3 class="benefits-title">Communication</h3>
+                    <p class="benefits-text"> Understanding your needs and wants is my priority and I am always open to discussions and corrections.</p>
+                </li>
+                <li class="benefits-item"> 
+                    <svg class="benefits-icon" width="24" height="24">
+                        <use href="/JSense/assets/icons-DflH_i02.svg#icon-services-brush"></use>
+                      </svg>
+                    <h3 class="benefits-title">Art</h3>
+                    <p class="benefits-text">Thanks to my creative nature, I am ready to accept challenges and help you bring your ideas to life. </p>
+                </li>
+                <li class="benefits-item"> 
+                  <svg class="benefits-icon" width="24" height="24">
+                      <use href="/JSense/assets/icons-DflH_i02.svg#icon-services-hourglass"></use>
+                    </svg>
+                  <h3 class="benefits-title">Urgent execution</h3>
+                  <p class="benefits-text">I understand how important time is to you. Ready to work quickly and efficiently, without reducing the quality of work.</p>
+              </li>
+               
+            </ul>
+            <a class="benefits-btn" href="#footer">Order the project</a>
+        </div>
+  <button
+    class="btn-scroll-top is-btnshow is-btnshow-hide"
+    aria-label="Button scroll top"
+  >
+    <svg class="btn-scroll-top-icon" width="50" height="50" fill="currentColor">
+      <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-up"></use>
+    </svg>
+  </button>
+  </div>
+</section>
+      <section class="projects-section" id="projects">
+  <div class="container swiper-container">
+    <h2 class="projects-title">Projects</h2>
+    <ul class="swiper-wrapper">
+      <li class="project-content swiper-slide">
+        <div class="projects-content-block">
+          <div class="projects-left">
+            <ul class="projects-hashtags-list">
+              <li class="projects-hashtags-item">#react</li>
+              <li class="projects-hashtags-item">#js</li>
+              <li class="projects-hashtags-item">#node js</li>
+              <li class="projects-hashtags-item">#git</li>
+            </ul>
+            <h3 class="projects-subtitle">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+            <a
+              class="projects-button"
+              href="https://github.com/Mariia-Ann/JSense"
+              target="_blank"
+              >See project</a
+            >
+          </div>
+          <div class="projects-right">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="/JSense/assets/read-journey-tab-6Czt-3-p.jpg 1x, /JSense/assets/read-journey-tab@2x-B5Cfc9Mz.jpg 2x"
+              />
+
+              <source
+                media="(max-width: 767.98px)"
+                srcset="/JSense/assets/read-journey-mob-DsC38Z0k.jpg 1x, /JSense/assets/read-journey-mob@2x-D6us8bgf.jpg 2x"
+              />
+              <img
+                class="project-img"
+                src="/JSense/assets/read-journey-mob-DsC38Z0k.jpg"
+                alt="Website Read Journey"
+                width="311"
+                height="195"
+              />
+            </picture>
+          </div>
+        </div>
+      </li>
+      <li class="project-content swiper-slide">
+        <div class="projects-content-block">
+          <div class="projects-left">
+            <ul class="projects-hashtags-list">
+              <li class="projects-hashtags-item">#react</li>
+              <li class="projects-hashtags-item">#js</li>
+              <li class="projects-hashtags-item">#node js</li>
+              <li class="projects-hashtags-item">#git</li>
+            </ul>
+            <h3 class="projects-subtitle">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+            <div class="projects-button">
+              <a href="https://github.com/Mariia-Ann/JSense" target="_blank"
+                >See project</a
+              >
+            </div>
+          </div>
+          <div class="projects-right">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="/JSense/assets/vocab-builder-tab-CDlUtiT4.jpg 1x, /JSense/assets/vocab-builder-tab@2x-5Bv4HNW0.jpg 2x"
+              />
+              <source
+                media="(max-width: 767.98px)"
+                srcset="/JSense/assets/vocab-builder-mob-BcE7kC41.jpg 1x, /JSense/assets/vocab-builder-mob@2x-Y_UVs_DJ.jpg 2x"
+              />
+              <img
+                class="project-img"
+                src="/JSense/assets/vocab-builder-mob-BcE7kC41.jpg"
+                alt="Website Vocab Builder"
+                width="311"
+                height="195"
+              />
+            </picture>
+          </div>
+        </div>
+      </li>
+      <li class="project-content swiper-slide">
+        <div class="projects-content-block">
+          <div class="projects-left">
+            <ul class="projects-hashtags-list">
+              <li class="projects-hashtags-item">#react</li>
+              <li class="projects-hashtags-item">#js</li>
+              <li class="projects-hashtags-item">#node js</li>
+              <li class="projects-hashtags-item">#git</li>
+            </ul>
+            <h3 class="projects-subtitle">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </h3>
+            <div class="projects-button">
+              <a href="https://github.com/Mariia-Ann/JSense" target="_blank"
+                >See project</a
+              >
+            </div>
+          </div>
+          <div class="projects-right">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="/JSense/assets/petlove-tab-6hdqLRjr.jpg 1x, /JSense/assets/petlove-tab@2x-CvNtzWcy.jpg 2x"
+              />
+              <source
+                media="(max-width: 767.98px)"
+                srcset="/JSense/assets/petlove-tab-6hdqLRjr.jpg 1x, /JSense/assets/petlove-tab@2x-CvNtzWcy.jpg 2x"
+              />
+              <img
+                class="project-img"
+                src="/JSense/assets/petlove-tab-6hdqLRjr.jpg"
+                alt="Website Pet Love"
+                width="311"
+                height="195"
+              />
+            </picture>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="projects-arrows-block">
+      <button class="project-arrow-left" type="button">
+        <svg class="projects-icon" height="24" width="25">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-arrow-narrow-left"></use>
+        </svg>
+      </button>
+      <button class="project-arrow-right" type="button">
+        <svg class="projects-icon" height="24" width="25">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section id="faq" class="faq-section">
+  <div class="container">
+    <h2 class="faq-title">FAQ</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <button class="faq-container" type="button">
+          <span class="faq-subtext">
+            What programming languages are most often used in your project?
+          </span>
+
+          <span class="faq-vector">
+            <svg class="faq-vector-icon" width="40" height="40">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </span>
+        </button>
+        <p class="faq-text hidden">
+          In the field of web development, there are various technologies and
+          programming languages. Typically, this includes a combination of
+          frontend (client side) and backend (server side) languages.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-container" type="button">
+          <span class="faq-subtext">What are the deadlines for the project?</span>
+
+          <span class="faq-vector">
+            <svg class="faq-vector-icon" width="40" height="40">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </span>
+        </button>
+        <p class="faq-text hidden">
+          The terms of project implementation depend to a large extent on a
+          number of factors, such as the scope of the project, its complexity,
+          and the availability of resources. Determining exact deadlines is a
+          difficult task, and it usually occurs during the planning phase of the
+          project.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-container" type="button">
+          <span class="faq-subtext">What payment methods do you accept?</span>
+
+          <span class="faq-vector">
+            <svg class="faq-vector-icon" width="40" height="40">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </span>
+        </button>
+        <p class="faq-text hidden">
+          Payment through credit and debit cards such as Visa, MasterCard,
+          specialized electronic payment systems such as PayPal, as well as
+          payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-container" type="button">
+          <span class="faq-subtext">How can I contact you?</span>
+
+          <span class="faq-vector">
+            <svg class="faq-vector-icon" width="40" height="40">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </span>
+        </button>
+        <p class="faq-text hidden">
+          In the field of web development, there are various technologies and
+          programming languages. Typically, this includes a combination of
+          frontend (client side) and backend (server side) languages.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-container" type="button">
+          <span class="faq-subtext">Do you provide advice or support?</span>
+
+          <span class="faq-vector">
+            <svg class="faq-vector-icon" width="40" height="40">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </span>
+        </button>
+        <p class="faq-text hidden">
+          The terms of project implementation depend to a large extent on a
+          number of factors, such as the scope of the project, its complexity,
+          and the availability of resources. Determining exact deadlines is a
+          difficult task, and it usually occurs during the planning phase of the
+          project.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-container">
+          <span class="faq-subtext">
+            What does the process of developing a software product look like
+            from idea to implementation?
+          </span>
+
+          <span class="faq-vector">
+            <svg class="faq-vector-icon" width="40" height="40">
+              <use href="/JSense/assets/icons-DflH_i02.svg#icon-icon-down"></use>
+            </svg>
+          </span>
+        </button>
+        <p class="faq-text hidden">
+          Payment through credit and debit cards such as Visa, MasterCard,
+          specialized electronic payment systems such as PayPal, as well as
+          payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="covers">
+    <div class="container covers-container">
+    <h2 class="visually-hidden">Covers</h2>
+
+    <div class="content">
+        <div class="marquee-inner">
+            <ul class="marquee">
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-1-DInvwIvF.jpg" alt="Cover 1">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-3-BKaKUnBN.jpg" alt="Cover 3">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-4-BdRePsWY.jpg" alt="Cover 4">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-6-BESsrnpX.jpg" alt="Cover 6">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-7-0SFEI0O5.jpg" alt="Cover 7">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-9-wwui6eZd.jpg" alt="Cover 9">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-2-uguZiQYV.jpg" alt="Cover 2">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-3-BKaKUnBN.jpg" alt="Cover 3">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-10-BBp-B76k.jpg" alt="Cover 10">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-1-DInvwIvF.jpg" alt="Cover 1">
+                </li>
+            </ul>
+        </div>
+
+        <div class="marquee-inner">
+            <ul class="marquee">
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-7-0SFEI0O5.jpg" alt="Cover 7">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-2-uguZiQYV.jpg" alt="Cover 2">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-8-xBBDtDAr.jpg" alt="Cover 8">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-10-BBp-B76k.jpg" alt="Cover 10">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-3-BKaKUnBN.jpg" alt="Cover 3">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-10-BBp-B76k.jpg" alt="Cover 10">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-1-DInvwIvF.jpg" alt="Cover 1">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-4-BdRePsWY.jpg" alt="Cover 4">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-5-DoIDt33n.jpg" alt="Cover 5">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-8-xBBDtDAr.jpg" alt="Cover 8">
+                </li>
+            </ul>
+        </div>
+
+        <div class="marquee-inner">
+            <ul class="marquee">
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-9-wwui6eZd.jpg" alt="Cover 9">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-10-BBp-B76k.jpg" alt="Cover 10">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-5-DoIDt33n.jpg" alt="Cover 5">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-8-xBBDtDAr.jpg" alt="Cover 8">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-2-uguZiQYV.jpg" alt="Cover 2">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-7-0SFEI0O5.jpg" alt="Cover 7">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-9-wwui6eZd.jpg" alt="Cover 9">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-1-DInvwIvF.jpg" alt="Cover 1">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-10-BBp-B76k.jpg" alt="Cover 10">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-2-uguZiQYV.jpg" alt="Cover 2">
+                </li>
+            </ul>
+        </div>
+
+        <div class="marquee-inner">
+            <ul class="marquee">
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-10-BBp-B76k.jpg" alt="Cover 1">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-6-BESsrnpX.jpg" alt="Cover 6">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-7-0SFEI0O5.jpg" alt="Cover 7">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-8-xBBDtDAr.jpg" alt="Cover 8">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-4-BdRePsWY.jpg" alt="Cover 4">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-5-DoIDt33n.jpg" alt="Cover 5">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-2-uguZiQYV.jpg" alt="Cover 2">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-10-BBp-B76k.jpg" alt="Cover 10">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-3-BKaKUnBN.jpg" alt="Cover 3">
+                </li>
+                <li class="marquee-item">
+                    <img class="marquee-line" src="/JSense/assets/covers-1-DInvwIvF.jpg" alt="Cover 1">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</section>
+      <section class="reviews-section" id="reviews-section-id">
+  <div class="reviews container">
+    <h2 class="reviews-header">Reviews</h2>
+    <div class="swiper2 swiper">
+      <h2 class="not-found visually-hidden">Not found</h2>
+      <ul class="reviews-list swiper-wrapper"></ul>
+    </div>
+    <div class="btn-div" id="btn-div-id2">
+      <button class="left-btn2 swiper-button-prev" id="left-btn2">
+        <svg class="reviews-icon" height="24" width="24">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-arrow-narrow-left"></use>
+        </svg>
+      </button>
+      <button class="right-btn2 swiper-button-next" id="right-btn2">
+        <svg class="reviews-icon" height="24" width="24">
+          <use href="/JSense/assets/icons-DflH_i02.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer" id="footer">
+    <div class="container container-footer">
+        <div class="together-text">
+            <img class="together-img avatar" src="/JSense/assets/work-tog-gI3m1cOe.png" alt="boy" />
+            <h2 class="together-title">
+                Let's <span class="together-span">work</span>
+                <span class="together-second-line">together</span>
+            </h2>
+        </div>
+
+        <form class="contact-form" novalidate>
+            <div class="email-box">
+                <label for="email" class="form-email-lable"></label>
+                <input class="form-input-email" type="email" id="email" name="email" placeholder="clients@gmail.com"
+                    pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" autocomplete="off" required>
+            </div>
+
+            <div class="massage-box">
+                <label class="form-lable-massage" for="message"></label>
+                <textarea class="comment-field" id="message" name="message" placeholder="comments" required></textarea>
+            </div>
+
+            <button class="form-button-submit" type="submit">Send</button>
+        </form>
+
+        <div class="together-contacts">
+            <ul class="together-contacts-list">
+                <li class="together-contacts-item">
+                    <a class="together-contacts-link" href="mailto:lloydjefferson@gmail.com" rel="noopener noreferrer">
+                        lloydjefferson@gmail.com
+                    </a>
+                </li>
+                <li class="together-contacts-item">
+                    <a class="together-contacts-link" href="tel:+3801111111111" rel="noopener noreferrer">
+                        +380 11 1111 1111
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="backdrop" class="backdrop is-hidden">
+            <div id="modal" class="modal-together">
+                <div class="modal-content">
+                    <svg class="close-button" width="22" height="22">
+                        <use href="/JSense/assets/icons-DflH_i02.svg#icon-close-btn"></use>
+                    </svg>
+                    <div class="modal-text-content">
+                        <h3 class="modal-title">
+                            Thank you for your interest in cooperation!
+                        </h3>
+                        <p class="modal-text">
+                            The manager will contact you shortly to discuss further details and opportunities for
+                            cooperation. Please stay in touch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  </body>
+</html>
